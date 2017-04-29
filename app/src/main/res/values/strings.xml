@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MusicPlayer</string>
+    <string name="main_activity_label">This is the main activity that holds the logo and start button</string>
+    <string name="instructions">Welcome to Music Player. Click to open your library</string>
 </resources>
