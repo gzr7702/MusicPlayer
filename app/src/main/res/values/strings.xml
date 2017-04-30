@@ -3,5 +3,6 @@
     <string name="main_activity_label">This is the main activity that holds the logo and start button</string>
     <string name="instructions">Welcome to Music Player. Click to open your library</string>
 
+    <string name="library_activity_label">This is the library activity that shows the device music library</string>
     <string name="header">Music Library</string>
 </resources>
