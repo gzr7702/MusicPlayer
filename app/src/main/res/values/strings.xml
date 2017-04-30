@@ -6,5 +6,5 @@
     <string name="library_activity_label">This is the library activity that shows the device music library</string>
     <string name="header">Music Library</string>
 
-    <string name="play_activity_label">This is the activity that shows the song playing</string>
+    <string name="play_activity_label">This activity shows the song playing</string>
 </resources>

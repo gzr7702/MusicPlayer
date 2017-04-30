@@ -17,20 +17,23 @@ import java.util.ArrayList;
  */
 
 public class DisplayLibraryActivity extends AppCompatActivity {
+    ArrayList<SongItem> mSongs = new ArrayList<SongItem>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_library);
 
-        ArrayAdapter adapter = new ListAdapter(this, generateData());
+        generateData();
+        ArrayAdapter adapter = new ListAdapter(this, mSongs);
 
         final ListView listView = (ListView) findViewById(R.id.music_list);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent playIntent = new Intent(getApplicationContext(), PlayActivity.class);
-                playIntent.putExtra("songTitle", "hello");
+                Intent playIntent = new Intent(getApplicationContext(), PlayActivity.class);
+                String songTitle = mSongs.get(position).getTitle();
+                playIntent.putExtra("songTitle", songTitle);
                 startActivity(playIntent);
             }
         });
@@ -38,24 +41,21 @@ public class DisplayLibraryActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
-    private ArrayList<SongItem> generateData() {
-        ArrayList<SongItem> songs = new ArrayList<SongItem>();
-        songs.add(new SongItem("Song List"));
-        songs.add(new SongItem(R.drawable.audio_file, "Stairway to Heaven"));
-        songs.add(new SongItem(R.drawable.audio_file, "Let's Dance"));
-        songs.add(new SongItem(R.drawable.audio_file, "Master of Puppets"));
-        songs.add(new SongItem(R.drawable.audio_file, "Live till You Die"));
-        songs.add(new SongItem(R.drawable.audio_file, "Umbrella"));
-        songs.add(new SongItem(R.drawable.audio_file, "Rolling in the Deep"));
-        songs.add(new SongItem(R.drawable.audio_file, "Just Dance"));
-        songs.add(new SongItem(R.drawable.audio_file, "Whiskey in the Jar"));
-        songs.add(new SongItem(R.drawable.audio_file, "Mr. Brightside"));
-        songs.add(new SongItem(R.drawable.audio_file, "War Pigs"));
-        songs.add(new SongItem(R.drawable.audio_file, "Ghost Town"));
-        songs.add(new SongItem(R.drawable.audio_file, "Message in a Bottle"));
-        songs.add(new SongItem(R.drawable.audio_file, "Billie Jean"));
-        songs.add(new SongItem(R.drawable.audio_file, "Bohemian Rhapsody"));
-
-        return songs;
+    private void generateData() {
+        mSongs.add(new SongItem("Song List"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Stairway to Heaven"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Let's Dance"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Master of Puppets"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Live till You Die"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Umbrella"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Rolling in the Deep"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Just Dance"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Whiskey in the Jar"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Mr. Brightside"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "War Pigs"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Ghost Town"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Message in a Bottle"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Billie Jean"));
+        mSongs.add(new SongItem(R.drawable.audio_file, "Bohemian Rhapsody"));
     }
 }
