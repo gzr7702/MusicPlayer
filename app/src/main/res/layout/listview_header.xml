@@ -8,11 +8,12 @@
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/header"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
               android:padding="10dip"
-              android:textSize="16dip"
-              android:textStyle="bold" />
+              android:textSize="24sp"
+              android:textStyle="bold"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
