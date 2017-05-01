@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">MusicPlayer</string>
-    <string name="main_activity_label">This is the main activity that holds the logo and start button</string>
+    <string name="main_activity_text">This is the main activity that holds the logo and start button</string>
+    <string name="main_activity_label">Music Player</string>
     <string name="instructions">Welcome to Music Player. Click to open your library</string>
 
-    <string name="library_activity_label">This is the library activity that shows the device music library</string>
+    <string name="library_activity_text">This is the library activity that shows the device music library</string>
+    <string name="library_activity_label">User Library</string>
     <string name="header">Music Library</string>
 
-    <string name="play_activity_label">This activity shows the song playing</string>
+    <string name="play_activity_text">This activity shows the song playing</string>
+    <string name="play_activity_label">Playing</string>
 </resources>
