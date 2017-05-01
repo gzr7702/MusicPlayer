@@ -8,6 +8,6 @@
     <string name="library_activity_label">User Library</string>
     <string name="header">Music Library</string>
 
-    <string name="play_activity_text">This activity shows the song playing</string>
+    <string name="play_activity_text">This activity shows the song playing.\nIt will use the MediaPlayer API to play local files.</string>
     <string name="play_activity_label">Playing</string>
 </resources>
